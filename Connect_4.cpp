@@ -21,7 +21,7 @@
  *
  */
 
-//compile with comect_4_grid.cpp!
+//compile with connect_4_grid.cpp!
 
 #include "conect_4_grid.h"
 #include <iostream>
