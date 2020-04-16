@@ -1,14 +1,15 @@
 CC = g++
+CC_OPTS="-Wall"
 prefix = ~
 OBJS = connect_4.o connect_4_grid.o player.o
 
 all:	connect_4
 
 connect_4:	$(OBJS)
-	$(CC) -o connect_4 $(OBJS)
+	$(CC) $(CC_OPTS) -o connect_4 $(OBJS)
 
 $(OBJS):	%.o:	%.cpp
-	$(CC) -c -o $@ $<
+	$(CC) $(CC_OPTS) -c -o $@ $<
 
 install:	connect_4
 	[ -d ${prefix}/bin ] || mkdir ${prefix}/bin

@@ -3,7 +3,8 @@ Lets you play connect-4 with another person or the computer.<br/>
 At present only works in a terminal against the computer.
 ## Issues
 Only works in terminal.<br/>
-No switch to play against someone else.<br/>
+Drifts from top to bottom of terminal.<br/>
+Each instance can only play one type of game(computer or two-player)<br/>
 The `make install` command only installs on a Linux system.<br/>
 ## Contributing
 Feel free to raise issues(with fixes if possable!).<br/>
