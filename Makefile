@@ -14,9 +14,11 @@ $(OBJS):	%.o:	%.cpp
 install:	connect_4
 	[ -d ${prefix}/bin ] || mkdir ${prefix}/bin
 	cp connect_4 $(prefix)/bin
+	cp connect_4.6.gz /usr/share/man/man6/
 
 uninstall:	install
 	[ -f ${prefix}/bin/connect_4 ] && rm ${prefix}/bin/connect_4 
+	rm /usr/share/man/man6/
 
 clean:
 	if [ -f connect_4 ]; then rm connect_4; fi
