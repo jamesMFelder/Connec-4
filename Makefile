@@ -1,6 +1,6 @@
 CC = g++
 CC_OPTS="-Wall"
-prefix = ~
+prefix = /usr
 OBJS = connect_4.o connect_4_grid.o player.o
 
 all:	connect_4
