@@ -25,7 +25,7 @@
 #ifndef CONECT_4_GRID_H
 #define CONECT_4_GRID_H
 
-#define GH 6
+#define GH 7
 #define FGH 8
 #define GW 7
 #define FGW 9
