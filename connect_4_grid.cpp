@@ -47,15 +47,22 @@ Connect_4_grid::Connect_4_grid(){
 
 int Connect_4_grid::addPiece(int spot, char color){
     int height;//declaration
-
+ 
+    if(spot > 9){
+	    cerr << "Please enter a DIGIT between 1 and 7." << endl;
+	    cin.clear();
+	    return 2;
+    }
     if(spot > GW || spot < 1 ){
 	    cerr << "GW=" << GW << " and you chose spot: " << spot << endl;
         cerr << "Bad choice. Try again." << endl;
+	cin.clear();
         return 2;
     }//check that the top is empty and spot is valid.
     else if (grid[spot][GH-1] != ' '){
-	    cerr << "Column " << spot << " is full. Please try again." << endl;
-	    return 2;
+	cerr << "Column " << spot << " is full. Please try again." << endl;
+	cin.clear();
+	return 2;
     }
 
     for(height=GH;grid[spot][height-1] == ' '; height--){

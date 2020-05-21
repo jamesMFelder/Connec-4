@@ -58,17 +58,19 @@ int two_players(int argc, char **argv){
     Connect_4_grid c;
     for(i=4;c.check_win() == 0;i++){//be very carefull changing i(on multiple of 2 red plays, otherwise yellow plays
         if(i%2 == 0){//is it red's turn
-			c.print();//print the grid
+		c.print();//print the grid
             cout << "Red's turn: ";
             cin >> choice;
             j=c.addPiece(choice, 'R');//add the choice to the grid
+	    cin.get();
             i=i-2;//make an overflow less likely
         }
         else{//yellow's turn
-			c.print();
-			cout << "Yellow's turn: ";
-			cin >> choice;
-			j=c.addPiece(choice,'Y');//add the choice to the grid
+		c.print();
+		cout << "Yellow's turn: ";
+		cin >> choice;
+		j=c.addPiece(choice,'Y');//add the choice to the grid
+		cin.get();
         }
         if(j==2){//bad value
             --i;//have the player play again
@@ -83,7 +85,7 @@ int two_players(int argc, char **argv){
 
 int computer(int argc, char **argv){
 	short int i, j, choice;
-    char play_again;
+	char play_again;
     Connect_4_grid c;
     player p;
     p.set_color('Y');
@@ -93,8 +95,10 @@ int computer(int argc, char **argv){
 	    c.print();
             cout << "Red's turn: ";
             cin >> choice;
+	    cout << "You choose " << choice << endl;
             j=c.addPiece(choice, 'R');
             i=i-2;
+	    cin.get();
         }
         else{
 	    j=p.play();
